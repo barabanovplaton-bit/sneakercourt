@@ -1477,10 +1477,19 @@ html:hover {
   .hero-title { font-size: 32px; }
   .hero-subtitle { font-size: 14px; }
   .bento-section { padding: 36px 16px 48px; }
-  .bento-grid { grid-template-columns: 1fr; }
-  .bento-card.large { grid-column: span 1; }
+  .bento-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .bento-card.large { grid-column: span 2; }
   .catalog-section { padding: 80px 16px 48px; }
-  .catalog-grid { grid-template-columns: 1fr; }
+  .catalog-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .bento-image { height: 140px; }
+  .bento-name { font-size: 12px; }
+  .bento-brand { font-size: 9px; }
+  .bento-price { font-size: 14px; }
+  .bento-info { padding: 10px; }
+  .product-card-name { font-size: 12px; }
+  .product-card-price { font-size: 14px; }
+  .product-card-brand { font-size: 10px; }
+  .product-card-body { padding: 10px; }
   .filter-groups { grid-template-columns: 1fr; }
   .product-page { padding: 80px 16px 48px; }
   .product-gallery { height: 300px; }
@@ -1493,6 +1502,14 @@ html:hover {
   .toast-container { bottom: 80px; right: 12px; }
   .admin-stats { grid-template-columns: 1fr; }
   .section-header { flex-direction: column; align-items: flex-start; gap: 10px; }
+}
+
+@media (max-width: 480px) {
+  .catalog-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .bento-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .bento-card.large { grid-column: span 2; }
+  .product-card-image { height: 120px; }
+  .bento-image { height: 120px; }
 }
 
 @media (min-width: 769px) {

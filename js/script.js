@@ -178,7 +178,7 @@ function initScrollAnimations() {
       }
     });
   }, { threshold: 0.1 });
-  document.querySelectorAll('.animate').forEach(el => observer.observe(el));
+  document.querySelectorAll('.animate:not(.visible)').forEach(el => observer.observe(el));
 }
 
 // ========== RENDER BENTO GRID (index.html) ==========
